@@ -22,3 +22,5 @@ dependencyResolutionManagement {
 rootProject.name = "TechSpireAssignment"
 include(":app")
 include(":domain")
+include(":presentation")
+include(":data")
