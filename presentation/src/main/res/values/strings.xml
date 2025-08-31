@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="input_points_count_and_press_go">Введите количество точек и нажмите «Поехали»</string>
+    <string name="points_count">Количество точек</string>
+    <string name="go">Поехали</string>
+</resources>

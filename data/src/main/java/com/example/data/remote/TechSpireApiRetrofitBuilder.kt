@@ -23,7 +23,6 @@ object TechSpireApiRetrofitBuilder {
             level = HttpLoggingInterceptor.Level.BODY
         }
 
-
         val okHttpClient = OkHttpClient.Builder().apply {
             addInterceptor(ConnectivityInterceptor())
             addInterceptor(logging)
