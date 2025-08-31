@@ -55,7 +55,7 @@ class MainActivity : ComponentActivity() {
         btnGo.setOnClickListener {
             val count = etCount.text.toString().toIntOrNull()
             if (count == null || count <= 0) {
-                Toast.makeText(this, "Введите корректное число", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.input_correct_number), Toast.LENGTH_SHORT).show()
             } else {
                 viewModel.loadPoints(count)
             }

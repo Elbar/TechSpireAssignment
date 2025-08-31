@@ -56,4 +56,24 @@ dependencies {
     implementation(libs.mpandroidchart)
     implementation(libs.androidx.runtime)
 
+    // JUnit
+    testImplementation(libs.junit)
+
+    // Mockito
+    testImplementation(libs.mockito.core)
+    testImplementation(libs.mockito.kotlin)
+
+    // Coroutines test
+    testImplementation(libs.kotlinx.coroutines.test)
+
+    // Espresso
+    androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.core)
+    androidTestImplementation(libs.androidx.espresso.intents)
+
+    // Koin Test
+    testImplementation(libs.koin.test)
+    androidTestImplementation(libs.koin.test)
+    androidTestImplementation(libs.koin.test.junit4)
 }
