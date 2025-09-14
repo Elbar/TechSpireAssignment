@@ -8,11 +8,11 @@
 Тестовое приложение для Android, которое запрашивает координаты точек у сервера и отображает их в виде таблицы и графика.
 
 
-https://github.com/user-attachments/assets/c20e2854-760c-47b3-9e71-945f67b43941
+https://github.com/user-attachments/assets/f7ce09bd-e3c5-499e-8927-559aacb8c141
 
 
 
----
+---Up
 
 ## ⚡ Особенности
 
