@@ -31,10 +31,13 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
-
     implementation(project(":domain"))
 
     implementation(libs.androidx.lifecycle.viewmodel.ktx)

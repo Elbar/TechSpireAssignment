@@ -1,31 +1,37 @@
 package com.example.presentation.ui.result
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.domain.model.Point
-import com.example.presentation.R
+import com.example.presentation.databinding.ItemPointBinding
 
-class PointsAdapter(private val points: List<Point>) :
-    RecyclerView.Adapter<PointsAdapter.PointViewHolder>() {
+class PointsAdapter : RecyclerView.Adapter<PointsAdapter.PointViewHolder>() {
+    private val items = mutableListOf<Point>()
 
-    inner class PointViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val tvX: TextView = itemView.findViewById(R.id.tvX)
-        val tvY: TextView = itemView.findViewById(R.id.tvY)
+    fun submitList(points: List<Point>) {
+        items.clear()
+        items.addAll(points)
+        notifyDataSetChanged()
+    }
+
+    inner class PointViewHolder(private val binding: ItemPointBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        fun bind(point: Point) {
+            binding.tvX.text = "X: ${point.x}"
+            binding.tvY.text = "Y: ${point.y}"
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PointViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_point, parent, false)
-        return PointViewHolder(view)
+        val binding = ItemPointBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return PointViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: PointViewHolder, position: Int) {
-        val point = points[position]
-        holder.tvX.text = "x: ${point.x}"
-        holder.tvY.text = "y: ${point.y}"
+        holder.bind(items[position])
     }
 
-    override fun getItemCount() = points.size
+    override fun getItemCount() = items.size
 }
+

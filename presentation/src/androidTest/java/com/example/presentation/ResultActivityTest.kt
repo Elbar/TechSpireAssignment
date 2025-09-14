@@ -7,10 +7,18 @@ import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.*
 import com.example.domain.model.Point
+import com.example.presentation.di.testAppModule
 import com.example.presentation.ui.result.ResultActivity
+import org.junit.Rule
 import org.junit.Test
+import org.koin.test.KoinTestRule
 
 class ResultActivityTest {
+
+    @get:Rule
+    val koinTestRule = KoinTestRule.create {
+        modules(testAppModule)
+    }
 
     @Test
     fun recyclerAndChartAreVisible() {

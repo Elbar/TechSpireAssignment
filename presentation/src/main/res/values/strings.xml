@@ -4,4 +4,5 @@
     <string name="points_count">Количество точек</string>
     <string name="go">Поехали</string>
     <string name="input_correct_number">Введите корректное число</string>
+    <string name="save_graphic">Сохранить график</string>
 </resources>
